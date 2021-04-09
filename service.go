@@ -418,8 +418,12 @@ type Logger interface {
 	Error(v ...interface{}) error
 	Warning(v ...interface{}) error
 	Info(v ...interface{}) error
+	Debug(v ...interface{}) error
+	Trace(v ...interface{}) error
 
 	Errorf(format string, a ...interface{}) error
 	Warningf(format string, a ...interface{}) error
 	Infof(format string, a ...interface{}) error
+	Debugf(format string, a ...interface{}) error
+	Tracef(format string, a ...interface{}) error
 }
