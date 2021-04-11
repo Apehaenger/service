@@ -50,6 +50,12 @@ func (c consoleLogger) Debug(v ...interface{}) error {
 	color.Unset()
 	return nil
 }
+func (c consoleLogger) Trace(v ...interface{}) error {
+	color.Set(color.FgCyan)
+	c.trace.Print(v...)
+	color.Unset()
+	return nil
+}
 func (c consoleLogger) Errorf(format string, a ...interface{}) error {
 	color.Set(color.FgHiRed)
 	c.err.Printf(format, a...)
@@ -71,6 +77,12 @@ func (c consoleLogger) Infof(format string, a ...interface{}) error {
 func (c consoleLogger) Debugf(format string, a ...interface{}) error {
 	color.Set(color.FgHiCyan)
 	c.debug.Printf(format, a...)
+	color.Unset()
+	return nil
+}
+func (c consoleLogger) Tracef(format string, a ...interface{}) error {
+	color.Set(color.FgCyan)
+	c.trace.Printf(format, a...)
 	color.Unset()
 	return nil
 }
