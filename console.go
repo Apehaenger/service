@@ -22,7 +22,7 @@ func init() {
 	ConsoleLogger.trace = log.New(os.Stderr, "[TRC] ", (log.Ltime | log.Lmsgprefix))
 	ConsoleLogger.debug = log.New(os.Stderr, "[DBG] ", (log.Ltime | log.Lmsgprefix))
 	ConsoleLogger.info = log.New(os.Stderr, "[INF] ", (log.Ltime | log.Lmsgprefix))
-	ConsoleLogger.warn = log.New(os.Stderr, "[WAR] ", (log.Ltime | log.Lmsgprefix))
+	ConsoleLogger.warn = log.New(os.Stderr, "[WRN] ", (log.Ltime | log.Lmsgprefix))
 	ConsoleLogger.err = log.New(os.Stderr, "[ERR] ", (log.Ltime | log.Lmsgprefix))
 }
 
